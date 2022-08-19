@@ -24,6 +24,6 @@ def make_env(task_name: str, randomize_ground: bool = True):
 make_env.metadata = DMCGYM.metadata
 
 register(id=f"A1Run-v0",
-         entry_point="legged_mujoco:make_env",
+         entry_point="sim:make_env",
          max_episode_steps=400,
          kwargs=dict(task_name='run'))
