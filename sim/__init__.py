@@ -2,8 +2,8 @@ from dm_control import composer
 from dmcgym import DMCGYM
 from gym.envs.registration import register
 from gym.wrappers import FlattenObservation
-from legged_mujoco.robots import A1
-from legged_mujoco.tasks import Run
+from sim.robots import A1
+from sim.tasks import Run
 
 
 def make_env(task_name: str, randomize_ground: bool = True):
