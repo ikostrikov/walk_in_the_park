@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{783789d0-bab6-4d39-92d2-eddb2c606150}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>run.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>Global|PythonCore|3.5</InterpreterId>
+    <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <CommandLineArguments>--env HalfCheetah-v2 --max_samples 2000000</CommandLineArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <SuppressPackageInstallationPrompt>True</SuppressPackageInstallationPrompt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="data\logs\ant_awr_log0.txt" />
+    <Content Include="data\logs\ant_awr_log1.txt" />
+    <Content Include="data\logs\ant_awr_log2.txt" />
+    <Content Include="data\logs\ant_awr_log3.txt" />
+    <Content Include="data\logs\ant_awr_log4.txt" />
+    <Content Include="data\logs\ant_awr_log5.txt" />
+    <Content Include="data\logs\ant_awr_log6.txt" />
+    <Content Include="data\logs\ant_awr_log7.txt" />
+    <Content Include="data\logs\ant_awr_log8.txt" />
+    <Content Include="data\logs\ant_awr_log9.txt" />
+    <Content Include="data\logs\half_cheetah_awr_log0.txt" />
+    <Content Include="data\logs\half_cheetah_awr_log1.txt" />
+    <Content Include="data\logs\half_cheetah_awr_log2.txt" />
+    <Content Include="data\logs\half_cheetah_awr_log3.txt" />
+    <Content Include="data\logs\half_cheetah_awr_log4.txt" />
+    <Content Include="data\logs\half_cheetah_awr_log5.txt" />
+    <Content Include="data\logs\half_cheetah_awr_log6.txt" />
+    <Content Include="data\logs\half_cheetah_awr_log7.txt" />
+    <Content Include="data\logs\half_cheetah_awr_log8.txt" />
+    <Content Include="data\logs\half_cheetah_awr_log9.txt" />
+    <Content Include="data\logs\hopper_awr_log0.txt" />
+    <Content Include="data\logs\hopper_awr_log1.txt" />
+    <Content Include="data\logs\hopper_awr_log2.txt" />
+    <Content Include="data\logs\hopper_awr_log3.txt" />
+    <Content Include="data\logs\hopper_awr_log4.txt" />
+    <Content Include="data\logs\hopper_awr_log5.txt" />
+    <Content Include="data\logs\hopper_awr_log6.txt" />
+    <Content Include="data\logs\hopper_awr_log7.txt" />
+    <Content Include="data\logs\hopper_awr_log8.txt" />
+    <Content Include="data\logs\hopper_awr_log9.txt" />
+    <Content Include="data\logs\humanoid_awr_log0.txt" />
+    <Content Include="data\logs\humanoid_awr_log1.txt" />
+    <Content Include="data\logs\humanoid_awr_log2.txt" />
+    <Content Include="data\logs\humanoid_awr_log3.txt" />
+    <Content Include="data\logs\humanoid_awr_log4.txt" />
+    <Content Include="data\logs\humanoid_awr_log5.txt" />
+    <Content Include="data\logs\humanoid_awr_log6.txt" />
+    <Content Include="data\logs\humanoid_awr_log7.txt" />
+    <Content Include="data\logs\humanoid_awr_log8.txt" />
+    <Content Include="data\logs\humanoid_awr_log9.txt" />
+    <Content Include="data\logs\lunarlander_awr_log0.txt" />
+    <Content Include="data\logs\lunarlander_awr_log1.txt" />
+    <Content Include="data\logs\lunarlander_awr_log2.txt" />
+    <Content Include="data\logs\lunarlander_awr_log3.txt" />
+    <Content Include="data\logs\lunarlander_awr_log4.txt" />
+    <Content Include="data\logs\lunarlander_awr_log5.txt" />
+    <Content Include="data\logs\lunarlander_awr_log6.txt" />
+    <Content Include="data\logs\lunarlander_awr_log7.txt" />
+    <Content Include="data\logs\lunarlander_awr_log8.txt" />
+    <Content Include="data\logs\lunarlander_awr_log9.txt" />
+    <Content Include="data\logs\walker_awr_log0.txt" />
+    <Content Include="data\logs\walker_awr_log1.txt" />
+    <Content Include="data\logs\walker_awr_log2.txt" />
+    <Content Include="data\logs\walker_awr_log3.txt" />
+    <Content Include="data\logs\walker_awr_log4.txt" />
+    <Content Include="data\logs\walker_awr_log5.txt" />
+    <Content Include="data\logs\walker_awr_log6.txt" />
+    <Content Include="data\logs\walker_awr_log7.txt" />
+    <Content Include="data\logs\walker_awr_log8.txt" />
+    <Content Include="data\logs\walker_awr_log9.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="learning\mpi_solver.py" />
+    <Compile Include="learning\nets\fc_2layers_256units.py" />
+    <Compile Include="learning\nets\net_builder.py" />
+    <Compile Include="sac_configs.py" />
+    <Compile Include="learning\sac_agent.py" />
+    <Compile Include="learning\rl_agent.py" />
+    <Compile Include="learning\__init__.py" />
+    <Compile Include="run.py" />
+    <Compile Include="util\logger.py" />
+    <Compile Include="util\mpi_util.py" />
+    <Compile Include="util\net_util.py" />
+    <Compile Include="util\normalizer.py" />
+    <Compile Include="util\replay_buffer.py" />
+    <Compile Include="util\rl_path.py" />
+    <Compile Include="util\tf_util.py" />
+    <Compile Include="util\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data\" />
+    <Folder Include="data\logs" />
+    <Folder Include="learning" />
+    <Folder Include="learning\nets\" />
+    <Folder Include="util" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.5" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>

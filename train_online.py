@@ -3,14 +3,14 @@ import os
 import pickle
 import shutil
 
-import gym
 import numpy as np
 import tqdm
+
+import gym
+import wandb
 from absl import app, flags
 from flax.training import checkpoints
 from ml_collections import config_flags
-
-import wandb
 from rl.agents import SACLearner
 from rl.data import ReplayBuffer
 from rl.evaluation import evaluate
@@ -49,7 +49,7 @@ def main(_):
     wandb.config.update(FLAGS)
 
     if FLAGS.real_robot:
-        from a1_env import A1Real
+        from real.envs.a1_env import A1Real
         env = A1Real(zero_action=np.asarray([0.05, 0.9, -1.8] * 4))
     else:
         from env_utils import make_mujoco_env

@@ -1,0 +1,27 @@
+# JetBrains IDE files
+.idea
+
+# Python Files
+*.pyc
+
+*.opensdf
+*.sdf
+*.user
+*.exe
+*.VC.opendb
+*.psess
+*.pdb
+*.deps
+*.VC.db
+*.iobj
+*.ipdb
+*.pyd
+*_wrap.cpp
+*.htm
+*.o
+*.DS_Store
+*.so
+
+.vs/
+**/__pycache__/
+output/
