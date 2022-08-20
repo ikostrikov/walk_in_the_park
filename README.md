@@ -4,9 +4,21 @@ Code to replicate [A Walk in the Park: Learning to Walk in 20 Minutes With Model
 
 ## Installation
 
+Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
 To install the robot [SDK](https://github.com/unitreerobotics/unitree_legged_sdk), first install the dependencies in the README.md
 
-To build, run: `bash cd real/third_party/unitree_legged_sdk mkdir build cd build cmake .. make` 
+To build, run: 
+```bash
+cd real/third_party/unitree_legged_sdk
+mkdir build
+cd build
+cmake ..
+make
+``` 
 
 Finally, copy the built `robot_interface.XXX.so` file to this directory.
 

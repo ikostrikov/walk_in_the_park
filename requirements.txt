@@ -1,0 +1,15 @@
+pip
+jax[cuda]
+--find-links https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+flax
+tqdm
+gym
+tensorflow
+tensorflow_probability
+ml_collections
+wandb
+dm_control
+dmcgym @ git+https://github.com/ikostrikov/dmcgym
+pybullet
+attrs
+filterpy
