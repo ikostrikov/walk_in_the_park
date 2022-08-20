@@ -4,12 +4,12 @@ import numpy as np
 import tqdm
 
 import gym
-import sac_dev.learning.mpi_solver as mpi_solver
-import sac_dev.learning.nets.net_builder as net_builder
-import sac_dev.learning.rl_agent as rl_agent
-import sac_dev.util.mpi_util as mpi_util
-import sac_dev.util.net_util as net_util
-import sac_dev.util.rl_path as rl_path
+# import sac_dev.learning.mpi_solver as mpi_solver
+import real.sac_dev.learning.nets.net_builder as net_builder
+import real.sac_dev.learning.rl_agent as rl_agent
+# import sac_dev.util.mpi_util as mpi_util
+import real.sac_dev.util.net_util as net_util
+import real.sac_dev.util.rl_path as rl_path
 import tensorflow as tf
 '''
 Soft Actor-Critic Agent
@@ -270,7 +270,7 @@ class SACAgent(rl_agent.RLAgent):
         train_dataset = train_dataset.repeat().shuffle(
             buffer_size=self._replay_buffer._buffer_size,
             reshuffle_each_iteration=True)
-        num_procs = mpi_util.get_num_procs()
+        num_procs = 1
         local_batch_size = int(np.ceil(self._critic_batch_size / num_procs))
         train_dataset = train_dataset.batch(local_batch_size,
                                             drop_remainder=True)
@@ -465,7 +465,7 @@ class SACAgent(rl_agent.RLAgent):
 
     def _update(self, iter, new_sample_count):
         assert self._critic_batch_size == self._actor_batch_size
-        num_procs = mpi_util.get_num_procs()
+        num_procs = 1
         local_batch_size = int(np.ceil(self._critic_batch_size / num_procs))
 
         all_idx = self._replay_buffer.get_valid_idx()
@@ -512,7 +512,7 @@ class SACAgent(rl_agent.RLAgent):
         return info
 
     def _update_critic(self, steps, input_op):
-        num_procs = mpi_util.get_num_procs()
+        num_procs = 1
         local_batch_size = int(np.ceil(self._critic_batch_size / num_procs))
         info = None
         start = time.time()

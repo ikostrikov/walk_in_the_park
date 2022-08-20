@@ -1,4 +1,4 @@
-import sac_dev.util.net_util as net_util
+import real.sac_dev.util.net_util as net_util
 import tensorflow as tf
 
 NAME = "fc_2layers_256units"

@@ -2,8 +2,8 @@ import copy
 
 import numpy as np
 
-import sac_dev.util.logger as logger
-import sac_dev.util.rl_path as rl_path
+import real.sac_dev.util.logger as logger
+import real.sac_dev.util.rl_path as rl_path
 
 INVALID_IDX = -1
 

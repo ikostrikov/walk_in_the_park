@@ -8,13 +8,13 @@ import time
 import numpy as np
 
 import gym
-import moviepy.editor as mpy
+# import moviepy.editor as mpy
 import pybullet as p
-import sac_dev.util.logger as logger
-import sac_dev.util.mpi_util as mpi_util
-import sac_dev.util.normalizer as normalizer
-import sac_dev.util.replay_buffer as replay_buffer
-import sac_dev.util.rl_path as rl_path
+import real.sac_dev.util.logger as logger
+import real.sac_dev.util.mpi_util as mpi_util
+import real.sac_dev.util.normalizer as normalizer
+import real.sac_dev.util.replay_buffer as replay_buffer
+import real.sac_dev.util.rl_path as rl_path
 import tensorflow.compat.v1 as tf
 import tensorflow_probability as tfp
 
@@ -182,8 +182,8 @@ class RLAgent(abc.ABC):
                     model_file = os.path.join(model_dir,
                                               "model-{:06d}.ckpt".format(iter))
                     self.save_model(model_file)
-                    self.save_video(
-                        os.path.join(video_dir, "iter-" + str(iter) + ".gif"))
+                    #self.save_video(
+                    #    os.path.join(video_dir, "iter-" + str(iter) + ".gif"))
 
                 test_return, test_path_count, metrics = self._rollout_test(
                     local_test_episodes, print_info=False)
@@ -258,8 +258,8 @@ class RLAgent(abc.ABC):
                     model_file = os.path.join(model_dir,
                                               "model-{:06d}.ckpt".format(iter))
                     self.save_model(model_file)
-                    self.save_video(
-                        os.path.join(video_dir, "iter-" + str(iter) + ".gif"))
+                    #self.save_video(
+                    #    os.path.join(video_dir, "iter-" + str(iter) + ".gif"))
                     buffer_file = os.path.join(model_dir, "buffer.pkl")
                     file = open(buffer_file, "wb")
                     pickle.dump(self._replay_buffer, file)

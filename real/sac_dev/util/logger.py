@@ -22,7 +22,7 @@ import shutil
 import subprocess
 import time
 
-import sac_dev.util.mpi_util as mpi_util
+# import sac_dev.util.mpi_util as mpi_util
 
 
 class MyEncoder(json.JSONEncoder):
@@ -80,7 +80,7 @@ class Logger:
         return
 
     def is_root():
-        return mpi_util.is_root_proc()
+        return True
 
     def __init__(self):
         self.output_file = None

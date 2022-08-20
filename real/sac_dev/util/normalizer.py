@@ -2,9 +2,9 @@ import copy
 
 import numpy as np
 
-import sac_dev.util.mpi_util as mpi_util
+# import sac_dev.util.mpi_util as mpi_util
 import tensorflow as tf
-from sac_dev.util.logger import Logger
+from real.sac_dev.util.logger import Logger
 
 
 class Normalizer(object):
